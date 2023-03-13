@@ -1,0 +1,7 @@
+<h1>Entrada de visitante</h1>
+
+<form method="post" >{% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit">Agregar</button>
+</form

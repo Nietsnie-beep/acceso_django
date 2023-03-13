@@ -1,0 +1,20 @@
+<h1>Buscar Visitas</h1>
+
+<form method="get">{% csrf_token %}
+    <input type="text" id="kword" name="kword" placeholder="Ingrese Nombre">
+    
+    <button type="submit">Buscar</button>
+
+</form>
+
+<h3>Lista de resultados</h3>
+
+<ul>
+    {% for e in Personas %}
+        <li>{{e}}</li>
+        <li><a href="/add-visita">salida</a></li>
+    {% endfor %}
+
+</ul>
+        
+<!-- <a href="/add-person">Registrar nueva persona</a>  -->

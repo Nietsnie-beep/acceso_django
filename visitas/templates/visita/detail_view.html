@@ -1,0 +1,12 @@
+
+<div class="main">
+     
+    <!-- Specify fields to be displayed -->
+    {{ data.nombre }}<br/>
+    {{ data.description }}<br/>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.nombre}}
+        <input type="submit" value="submit">
+    </form>
+</div>

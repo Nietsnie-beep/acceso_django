@@ -1,0 +1,22 @@
+
+
+<form method="get">
+    
+    {{ filter.form }}
+    <button type="submit">Search</button>
+</form>
+
+<ul>
+    {% for snippet in filter.qs %}
+    <li>
+       {{snippet.persona}}
+    </li>
+    <li>
+        {{snippet.Estatus}}
+     </li>
+     <li>
+        <a href="/persona_edit_two/{{snippet.id}}">Cambiar Estatus</a>
+     </li>
+     <br>
+    {% endfor %}
+</ul>
